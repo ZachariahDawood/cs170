@@ -79,7 +79,7 @@ public class lab08 {
         System.out.println(arrayToString(testCase4));
     }
 
-    public static void rotateImage(int matrix[][]) {
+   /* public static void rotateImage(int matrix[][]) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = i; j < matrix.length - 1 - i; j++) {
                 int THolder = matrix[i][j];
@@ -89,7 +89,19 @@ public class lab08 {
                 matrix[j][matrix.length - 1 - i] = THolder;
             }
         }
-    }
+    } */
+
+    public static void rotateImage(int[][] matrix){
+        for (int row = 0; row < matrix.length; row++){
+          for (int col = 0; col < matrix[1].length; col++){
+            int col2 = matrix[1].length - 1;
+              matrix[row][col] = matrix[col][col2];
+            col2--;
+            }
+          }
+        }
+      
+    
     // top is matrix[i][j] (held in THolder)
     // left is matrix[matrix.length - 1 - j][i]
     // right is matrix[j][matrix.length - 1 - i]
